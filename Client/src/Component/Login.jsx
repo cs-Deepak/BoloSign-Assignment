@@ -6,7 +6,7 @@ import "./login.css"
 const Login = () => {
 
     const loginwithgoogle = ()=>{
-        window.open("http://localhost:6005/auth/google/callback","_self")
+        window.open("https://todo-backend-steel-six.vercel.app/auth/google/callback","_self")
     }
   return (
     <>
