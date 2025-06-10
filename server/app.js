@@ -14,6 +14,12 @@ app.use("/", emailRoutes);
 
 
 
+app.use(cors({
+  origin: "https://quicksign3.netlify.app",
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true
+}));
+
 // Connect to MongoDB once at startup
 connectDB()
   .then(() => console.log("MongoDB connected successfully"))
@@ -23,7 +29,7 @@ connectDB()
 
 // Middleware
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://quicksign3.netlify.app",
   methods: "GET,POST,PUT,DELETE",
   credentials: true
 }));
@@ -105,10 +111,10 @@ app.get("/auth/google", passport.authenticate("google", {
 
 app.get("/auth/google/callback", 
   passport.authenticate("google", {
-    failureRedirect: "http://localhost:5173/login"
+    failureRedirect: "https://quicksign3.netlify.app/login"
   }),
   (req, res) => {
-    res.redirect("http://localhost:5173/dashboard");
+    res.redirect("https://quicksign3.netlify.app/dashboard");
   }
 );
 
@@ -135,7 +141,7 @@ app.get("/auth/logout", (req, res) => {
         return res.status(500).send("Error during logout.");
       }
       res.clearCookie("connect.sid"); // Clear the session cookie if necessary
-      res.redirect("http://localhost:5173/login"); // Redirect the user to the login page or home page
+      res.redirect("https://quicksign3.netlify.app/login"); // Redirect the user to the login page or home page
     });
   });
   
@@ -165,7 +171,7 @@ app.get("/login/success",async(req,res)=>{
 app.get("/logout",(req,res,next)=>{
   req.logOut(function(err){
     if(err){return next(err)}
-    res.redirect("http://localhost:5173");
+    res.redirect("https://quicksign3.netlify.app");
   })
 })
 
@@ -184,7 +190,9 @@ app.post("/api/v2/addTask", (req, res) => {
 
 //app config
 
-
+const PORT = process.env.PORT || 6005;
+module.exports = app;
+});
 
 
 // Start Server
