@@ -11,7 +11,7 @@ const Header = () => {
 
   const getUser = async () => {
     try {
-      const response = await axios.get("http://localhost:6005/login/success", { withCredentials: true });
+      const response = await axios.get("https://todo-backend-steel-six.vercel.app/login/success", { withCredentials: true });
       setUserdata(response.data.user)
     } catch (error) {
       console.log("error", error);
@@ -20,7 +20,7 @@ const Header = () => {
 
 
   const logout = () => {
-    window.open("http://localhost:6005/logout", "_self")
+    window.open("https://todo-backend-steel-six.vercel.app/logout", "_self")
   }
 
   useEffect(() => {
