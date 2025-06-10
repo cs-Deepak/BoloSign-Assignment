@@ -4,6 +4,11 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import "./home.css";
 import { useNavigate } from 'react-router-dom';
+import checkImg from '../public/img/check (2).png';
+
+
+
+
 
 function Home() {
   const navigate = useNavigate();
@@ -34,7 +39,8 @@ function Home() {
         
         <div className="leftheading">
           <div className="image-container">
-            <img src="/public/img/check (2).png" alt="check-box" className='check-box'/>
+            <img src={checkImg} alt="check-box" className="check-box" />
+{/*             <img src="/public/img/check (2).png" alt="check-box" className='check-box'/> */}
             <div className="image-overlay"></div>
           </div>
         </div>
