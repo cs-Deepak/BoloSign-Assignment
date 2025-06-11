@@ -58,7 +58,7 @@ const Login = () => {
   return (
     <>
       <div className="login-page">
-        <span style={{fontSize:"100px", padding:"20px", fontWeight:"bolder", color:"white"}}> Hello <br/>QuickSign</span>
+        <span style={{fontSize:"100px", padding:"20px", fontWeight:"bolder", color:"white"}}> QuickSign</span>
 
         <div className="form">
           <div className='google-login'>
