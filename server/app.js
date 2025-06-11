@@ -190,9 +190,12 @@ app.post("/api/v2/addTask", (req, res) => {
 
 //app config
 
+// const PORT = process.env.PORT || 6005;
+// module.exports = app;
+// });
+
 const PORT = process.env.PORT || 6005;
 module.exports = app;
-});
 
 
 // Start Server
