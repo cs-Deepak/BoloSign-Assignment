@@ -52,7 +52,9 @@ import "./login.css"
 const Login = () => {
 
   const loginWithGoogle = () => {
-    window.open("https://quicksign-backend.onrender.com/auth/google?site=quicksign", "_self");
+    // window.open("https://quicksign-backend.onrender.com/auth/google?site=quicksign", "_self");
+          window.open("https://quicksign-backend.onrender.com/auth/google", "_self");
+
   };
 
   return (
