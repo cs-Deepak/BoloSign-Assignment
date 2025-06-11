@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import "./home.css";
 import { useNavigate } from 'react-router-dom';
-import checkImg from '../public/img/check (2).png';
+import checkImg from '../assets/check (2).png';
 
 
 
