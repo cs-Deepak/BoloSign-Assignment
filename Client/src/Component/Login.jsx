@@ -9,9 +9,15 @@ const Login = () => {
     //     window.open("https://todo-backend-steel-six.vercel.app/auth/google/callback","_self")
     // }
 
-    const loginwithgoogle = () => {
-  window.open("https://todo-backend-steel-six.vercel.app/auth/google?state=todo", "_self");
-}
+//     const loginwithgoogle = () => {
+//   window.open("https://todo-backend-steel-six.vercel.app/auth/google?state=todo", "_self");
+        
+// }
+
+    const loginWithGoogle = () => {
+  window.open("https://todo-backend-steel-six.vercel.app/auth/google?site=quicksign", "_self");
+};
+
   return (
     <>
         <div className="login-page">
