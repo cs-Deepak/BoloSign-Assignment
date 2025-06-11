@@ -20,7 +20,8 @@ const Header = () => {
 
 
   const logout = () => {
-    window.open("https://quicksign-backend.onrender.com/logout", "_self")
+    window.open("https://quicksign-backend.onrender.com/auth/logout", "_self");
+
   }
 
   useEffect(() => {
@@ -49,11 +50,12 @@ const Header = () => {
               
               <div className="user-menu">
                 <div className="user-info">
-                  <img 
-                    src={userdata?.image} 
+                <img 
+                    src={userdata?.image || "/img/default-avatar.png"} 
                     alt="Profile" 
                     className="user-avatar"
                   />
+
                   <span className="user-name">
                     {userdata?.displayName?.split(" ")[0]}
                   </span>
