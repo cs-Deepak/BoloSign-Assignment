@@ -11,7 +11,9 @@ const Header = () => {
 
   const getUser = async () => {
     try {
+      // const response = await axios.get("https://quicksign-backend.onrender.com/login/success", { withCredentials: true });
       const response = await axios.get("https://quicksign-backend.onrender.com/login/success", { withCredentials: true });
+
       setUserdata(response.data.user)
     } catch (error) {
       console.log("error", error);
